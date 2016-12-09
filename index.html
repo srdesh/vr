@@ -55,5 +55,14 @@
     
 	
 	</a-scene>
+	
+	
+	<script>
+            AFRAME.registerComponent('auto-enter-vr', {
+             init: function () {
+              this.el.sceneEl.enterVR();
+             }
+            });
+	</script>
   </body>
 </html>
