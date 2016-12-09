@@ -15,17 +15,18 @@
 	
 	
 	
-    <a-scene auto-enter-vr>
+    <a-scene vr-mode-ui="enabled: true">
 	
 	<a-assets>
-		<a-asset-item id="ok" src="ok.jpg"></a-asset-item>
+		<img id="ok" src="ok.jpg"></img>
+		<img id="cookie" src="cookie.jpg"></img>
 	</a-assets>
 	
 	  <!--SPHERE!-->
       <!--<a-sphere position="1 1 -1" radius="1.25" opacity="1" src="ok.jpg"></a-sphere>!-->
 	  
 	  <!--BOX!-->
-	  <!--<a-box position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"  color="#4CC3D9"></a-box>!-->
+	  <!--<a-box position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"></a-box>!-->
 	  
 	  <!--CONE!-->
 	  <!--<a-cone color="tomato" radius-bottom="2" radius-top="0.5"></a-cone>!-->
@@ -34,12 +35,12 @@
 	  <!--<a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>!-->
 	  
 	  <!--RING!-->
-	  <a-ring color="teal" position="-3 0 0" radius-inner="0.5" radius-outer="1" image="ok.jpg"></a-ring>
+	  <!--<a-ring color="teal" position="-3 0 0" radius-inner="0.5" radius-outer="1"></a-ring>!-->
 	  
-	  <a-torus color="#43A367" arc="160" radius="1" radius-tubular="0.2" blend-model="#ok"></a-torus>
+	  <!--<a-torus arc="360" radius="1" radius-tubular="0.2" src="#cookie"></a-torus>!-->
 	  
 	  <!--PLANE!-->
-	  <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+	  <!--<a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>!-->
 		
 	  <!--SKY!-->
       <a-sky color="#ECECEC"></a-sky>
@@ -50,19 +51,14 @@
 		<a-camera></a-camera>
 		
 		<!--<a-light position="0 55 0"></a-light>!-->
+		
+		<!--<a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="20000"
+						easing="linear" repeat="indefinite"></a-animation>!-->
       
 	  </a-entity>
     
 	
 	</a-scene>
 	
-	
-	<script>
-            AFRAME.registerComponent('auto-enter-vr', {
-             init: function () {
-              this.el.sceneEl.enterVR();
-             }
-            });
-	</script>
   </body>
 </html>
