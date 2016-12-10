@@ -5,6 +5,11 @@
     <title>Hello, World! • A-Frame</title>
     <meta name="description" content="Hello, World! • A-Frame">
     <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+	<!--bmfont!-->
+	<script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
+	<!--rawgit!-->
+	<script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+	
   </head>
   <body>
   
@@ -18,45 +23,46 @@
     <a-scene vr-mode-ui="enabled: true">
 	
 	<a-assets>
-		<img id="ok" src="ok.jpg"></img>
 		<img id="cookie" src="cookie.jpg"></img>
 	</a-assets>
+
+	
 	
 	  <!--SPHERE!-->
-      <!--<a-sphere position="1 1 -1" radius="1.25" opacity="1" src="ok.jpg"></a-sphere>!-->
+      <!--<a-sphere position="1 1 -1" radius="1.50" opacity="1" color="red"></a-sphere>!-->
 	  
 	  <!--BOX!-->
-	  <!--<a-box position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"></a-box>!-->
+	  <!--<a-box position="-1 0.5 1" width="1" height="1" depth="1" src="cookie.jpg"></a-box>!-->
 	  
 	  <!--CONE!-->
-	  <!--<a-cone color="tomato" radius-bottom="2" radius-top="0.5"></a-cone>!-->
+	  <!--<a-cone color="tomato" position="-2 0 1" radius-bottom="2" radius-top="0.5" src="#cookie"></a-cone>!-->
 	  
 	  <!--CYLINDER!-->
-	  <!--<a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>!-->
+	  <!--<a-cylinder position="1 0.75 1" radius="0.5" height="1.5" src="#cookie"></a-cylinder>!-->
 	  
 	  <!--RING!-->
 	  <!--<a-ring color="teal" position="-3 0 0" radius-inner="0.5" radius-outer="1"></a-ring>!-->
 	  
-	  <!--<a-torus arc="360" radius="1" radius-tubular="0.2" src="#cookie"></a-torus>!-->
+	  <a-torus arc="180" radius="1" radius-tubular="0.2" src="#cookie"></a-torus>
 	  
 	  <!--PLANE!-->
 	  <!--<a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>!-->
-		
+	
+	
+	  <!--<a-entity text="text: Hi Everyone! Welcome to WebVR@Dhaka!" size="0.8"></a-entity>!-->
+	
 	  <!--SKY!-->
-      <a-sky color="#ECECEC"></a-sky>
+      <a-sky ></a-sky>
       
 	  
-	  <a-entity position="0 -1 3.8" camera look-controls wasd-controls>
+	 <a-entity position="0 -1 3.8" camera look-controls wasd-controls>
        
 		<a-camera></a-camera>
-		
-		<!--<a-light position="0 55 0"></a-light>!-->
-		
-		<!--<a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="20000"
-						easing="linear" repeat="indefinite"></a-animation>!-->
       
 	  </a-entity>
-    
+	  
+	  <!--<a-entity bmfont-text="text: Hi! All..."></a-entity>!-->
+	  <a-entity text="text:Hello!; size:0.1"></a-entity>
 	
 	</a-scene>
 	
